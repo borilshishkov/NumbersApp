@@ -62,6 +62,7 @@ public class Main {
         List<Integer> odd = new ArrayList<>();
         String[] numbers = nums[0].split("");
         for (int i = 0; i < numbers.length; i++) {
+            // Loop okolo čísel 1. argumentu. Pokud je číslo liché, přidá se do Listu odd.
             if (Integer.parseInt(numbers[i]) % 2 == 1) {
                 odd.add(Integer.valueOf(numbers[i]));
             }
