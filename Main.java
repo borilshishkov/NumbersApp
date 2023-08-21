@@ -13,11 +13,12 @@ public class Main {
         System.out.println("Příklad 1:\njava -jar app.jar \ninput.txt output.txt");
         System.out.println("Příklad 2:\njava -jar app.jar \n1234567 output.txt");
         Scanner scanner = new Scanner(System.in);
+        
         String input = scanner.nextLine();
         String[] inputs = input.split("\\s+");
         String onlyOdd;
         String onlyEven;
-
+        
         File file = new File(inputs[0]);
         if (file.exists()) {
             inputs[0] = readFile(inputs);
@@ -38,11 +39,13 @@ public class Main {
             }
         }
     }
+    
     public static String readFile(String[] input) throws IOException {
         File file = new File(input[0]);
         BufferedReader br = new BufferedReader(new FileReader(file));
         return br.readLine();
     }
+    
     public static String isEven(String[] nums) {
         List<Integer> even = new ArrayList<>();
         String[] numbers = nums[0].split("");
@@ -54,6 +57,7 @@ public class Main {
         }
         return even.toString().replaceAll(REGEX, "");
     }
+    
     public static String isOdd(String[] nums){
         List<Integer> odd = new ArrayList<>();
         String[] numbers = nums[0].split("");
@@ -66,6 +70,7 @@ public class Main {
     }
 
     static void writeFileOdd(String[] location, String onlyOdd) {
+        // Pouze pokud existuje druhý argument se vytvoří soubor s touto lokací.
         if (location.length > 1 && location[1] != null) {
             try {
                 File file = new File(location[1]);
