@@ -5,4 +5,4 @@ Second argument is optional and can contain a location where results would be sa
 
 The app filters the numbers depending if n.length == even or odd.
 
-executable .jar file is located in out/artifacts/NumberReaderBorilShishkov/NumberReaderBorilShishkov.jar
+Executable .jar file is located in out/artifacts/NumberReaderBorilShishkov/NumberReaderBorilShishkov.jar
