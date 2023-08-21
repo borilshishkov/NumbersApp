@@ -4,3 +4,5 @@ App which takes 1 or2 arguments. First of which is either a whole number or a li
 Second argument is optional and can contain a location where results would be saved into a text file.
 
 The app filters the numbers depending if n.length == even or odd.
+
+executable .jar file is located in out/artifacts/NumberReaderBorilShishkov/NumberReaderBorilShishkov.jar
