@@ -15,11 +15,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         
         String input = scanner.nextLine();
+        // Přečte standardní vstup a případně rozdělí na argumenty.
+        // inputs[0] = první argument, inputs[1] = druhý argument.
         String[] inputs = input.split("\\s+");
         String onlyOdd;
         String onlyEven;
         
         File file = new File(inputs[0]);
+        // Pokud je první argument cesta k souboru..
         if (file.exists()) {
             inputs[0] = readFile(inputs);
             if (inputs[0].split("").length % 2 == 0) {
@@ -29,6 +32,7 @@ public class Main {
                 onlyOdd = isOdd(inputs);
                 writeFileOdd(inputs, onlyOdd);
             }
+        // Pokud není musí to být celé číslo..
         } else {
             if (inputs[0].split("").length % 2 == 0) {
                 onlyEven = isEven(inputs);
